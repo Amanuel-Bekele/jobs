@@ -3,7 +3,9 @@ import {Button, StyleSheet, Text, View, Platform} from 'react-native';
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 import {createStackNavigator} from "@react-navigation/stack";
 import {NavigationContainer} from '@react-navigation/native';
+import {Provider} from 'react-redux';
 
+import store from './store';
 import AuthScreen from './screeens/AuthScreen';
 import WelcomeScreen from './screeens/WeclcomeScreen';
 import MapScreen from "./screeens/MapScreen";
@@ -50,13 +52,15 @@ export default function App() {
 
 
     return (
-        <NavigationContainer ref={navigationRef}>
-            <Tab.Navigator>
-                <Tab.Screen name="Welcome" component={WelcomeScreen}/>
-                <Tab.Screen name="Auth" component={AuthScreen}/>
-                <Tab.Screen name='Main' component={Main}/>
-            </Tab.Navigator>
-        </NavigationContainer>
+        <Provider store={store}>
+            <NavigationContainer>
+                <Tab.Navigator tabBarOptions={{ tabBarVisible: false, showLabel: false }}>
+                    <Tab.Screen name="Welcome" component={WelcomeScreen} />
+                    <Tab.Screen name="Auth" component={AuthScreen}/>
+                    <Tab.Screen name='Main' component={Main}/>
+                </Tab.Navigator>
+            </NavigationContainer>
+        </Provider>
     );
 }
 

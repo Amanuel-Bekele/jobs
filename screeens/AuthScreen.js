@@ -1,7 +1,10 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {View, Text} from 'react-native';
+import {connect} from "react-redux";
+import * as actions from "../actions";
 
-function AuthScreen({navigation}) {
+function AuthScreen(props) {
+    useEffect(() => props.facebookLogin(), []);
 
     return (<View>
         <Text>AuthScreen</Text>
@@ -13,4 +16,4 @@ function AuthScreen({navigation}) {
     </View>);
 }
 
-export default AuthScreen;
+export default connect(null, actions)(AuthScreen);

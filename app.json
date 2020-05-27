@@ -2,6 +2,9 @@
   "expo": {
     "name": "jobs",
     "slug": "jobs",
+    "githubUrl": "https://github.com/Amanuel-Bekele/jobs",
+    "facebookAppId": "674197826474759",
+    "facebookDisplayName": "Jobs",
     "platforms": [
       "ios",
       "android",

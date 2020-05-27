@@ -48,8 +48,7 @@ const styles = StyleSheet.create({
         color: 'white'
     },
     buttonStyle: {
-        backgroundColor: '#02AAD1',
-        marginTop: 15
+        backgroundColor: '#0288D1'
     }
 
 });
