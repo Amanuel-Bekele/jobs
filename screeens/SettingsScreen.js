@@ -1,16 +1,17 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import { Text, View } from 'react-native';
 
-function SettingsScreen({navigation}) {
+function SettingsScreen () {
 
-    return (<View>
-        <Text>SettingsScreen</Text>
-        <Text>SettingsScreen</Text>
-        <Text>SettingsScreen</Text>
-        <Text>SettingsScreen</Text>
-        <Text>SettingsScreen</Text>
-        <Text>SettingsScreen</Text>
-    </View>);
+  return (<View>
+    <Text>SettingsScreen</Text>
+    <Text>SettingsScreen</Text>
+    <Text>SettingsScreen</Text>
+    <Text>SettingsScreen</Text>
+    <Text>SettingsScreen</Text>
+    <Text>SettingsScreen</Text>
+  </View>);
+
 }
 
 export default SettingsScreen;

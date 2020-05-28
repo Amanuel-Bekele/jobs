@@ -1,19 +1,36 @@
-import React, {useState, useEffect} from 'react';
-import {View, Text} from 'react-native';
-import {connect} from "react-redux";
+import React, { useEffect } from 'react';
+import { View } from 'react-native';
+import { connect } from "react-redux";
 import * as actions from "../actions";
+import PropTypes from 'prop-types';
 
-function AuthScreen(props) {
-    useEffect(() => props.facebookLogin(), []);
+function AuthScreen ({ facebookLogin, navigation, token }) {
 
-    return (<View>
-        <Text>AuthScreen</Text>
-        <Text>AuthScreen</Text>
-        <Text>AuthScreen</Text>
-        <Text>AuthScreen</Text>
-        <Text>AuthScreen</Text>
-        <Text>AuthScreen</Text>
-    </View>);
+  useEffect(() => {
+
+    facebookLogin();
+
+  }, []);
+
+  useEffect(() => onAuthComplete(), [token]);
+
+  const onAuthComplete = () => {
+
+    if (token)
+      navigation.navigate('Main', { screen: 'Map' });
+
+  };
+
+  return <View/>;
+
 }
 
-export default connect(null, actions)(AuthScreen);
+AuthScreen.propTypes = {
+  facebookLogin: PropTypes.func,
+  navigation: PropTypes.object,
+  token: PropTypes.string
+};
+const mapStateToProps = ({ auth }) => ({ token: auth.token });
+
+
+export default connect(mapStateToProps, actions)(AuthScreen);

@@ -1,16 +1,16 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import { Text, View } from 'react-native';
 
-function DeckScreen({navigation}) {
+function DeckScreen () {
 
-    return (<View>
-        <Text>DeckScreen</Text>
-        <Text>DeckScreen</Text>
-        <Text>DeckScreen</Text>
-        <Text>DeckScreen</Text>
-        <Text>DeckScreen</Text>
-        <Text>DeckScreen</Text>
-    </View>);
+  return (<View>
+    <Text>DeckScreen</Text>
+    <Text>DeckScreen</Text>
+    <Text>DeckScreen</Text>
+    <Text>DeckScreen</Text>
+    <Text>DeckScreen</Text>
+    <Text>DeckScreen</Text>
+  </View>);
+
 }
-
 export default DeckScreen;

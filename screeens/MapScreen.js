@@ -1,16 +1,17 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import { View, Text } from 'react-native';
 
-function MapScreen({navigation}) {
+function MapScreen () {
 
-    return (<View>
-        <Text>MapScreen</Text>
-        <Text>MapScreen</Text>
-        <Text>MapScreen</Text>
-        <Text>MapScreen</Text>
-        <Text>MapScreen</Text>
-        <Text>MapScreen</Text>
-    </View>);
+  return (<View>
+    <Text>MapScreen</Text>
+    <Text>MapScreen</Text>
+    <Text>MapScreen</Text>
+    <Text>MapScreen</Text>
+    <Text>MapScreen</Text>
+    <Text>MapScreen</Text>
+  </View>);
+
 }
 
 export default MapScreen;
